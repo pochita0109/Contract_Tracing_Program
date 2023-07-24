@@ -40,6 +40,12 @@ class add_entry(tk.Frame):
         self.email_entry.place(x = 105, y = 150)
 
         # Ask the date of visit
+        self.visit = tk.Label(self, text = "Date of Visit")
+        self.visit.place(x = 355, y = 150)
+
+        self.visit_entry = tk.Entry(self)
+        self.visit_entry.place(x = 425, y = 150)
+        
         # Ask the vaccination status
         # Ask if there are symptoms of COVID-19
         # Ask if there are exposure on someone with COVID-19
