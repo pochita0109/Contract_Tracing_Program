@@ -26,6 +26,12 @@ class add_entry(tk.Frame):
         self.address_entry.place(x = 90, y = 100)
 
         # Ask the phone number
+        self.number = tk.Label(self, text = "Cellphone Number")
+        self.number.place(x = 265, y = 100)
+
+        self.number_entry = tk.Entry(self)
+        self.number_entry.place(x = 375, y = 100)
+
         # Ask the email adress
         # Ask the date of visit
         # Ask the vaccination status
