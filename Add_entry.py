@@ -47,7 +47,26 @@ class add_entry(tk.Frame):
         self.visit_entry.place(x = 425, y = 150)
         
         # Ask the vaccination status
-        
+        self.vaccination = tk.Label(self, text = "Have you been vaccinated for COVID-19?")
+        self.vaccination.place(x = 30, y = 250)
+
+        self.choice = tk.StringVar()
+
+        self.choice1= tk.Radiobutton(self, text = "Not yet", variable = self.choice, value = "Not yet")
+        self.choice1.place(x = 30, y = 275)
+
+        self.choice2= tk.Radiobutton(self, text = "1st Dose", variable = self.choice, value = "1st Dose")
+        self.choice2.place(x = 30, y = 300)
+
+        self.choice3= tk.Radiobutton(self, text = "2nd Dose", variable = self.choice, value = "2nd Dose")
+        self.choice3.place(x = 30, y = 325)
+
+        self.choice4= tk.Radiobutton(self, text = "1st Booster Shot", variable = self.choice, value = "1st Booster Shot")
+        self.choice4.place(x = 30, y = 350)
+
+        self.choice5= tk.Radiobutton(self, text = "2nd Booster Shot", variable = self.choice, value = "2nd Booster Shot")
+        self.choice5.place(x = 30, y = 375)
+
         # Ask if there are symptoms of COVID-19
         # Ask if there are exposure on someone with COVID-19
         # Ask if tested positive on COVID-19 in the last 14 days
