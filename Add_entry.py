@@ -47,6 +47,7 @@ class add_entry(tk.Frame):
         self.visit_entry.place(x = 425, y = 150)
         
         # Ask the vaccination status
+        
         # Ask if there are symptoms of COVID-19
         # Ask if there are exposure on someone with COVID-19
         # Ask if tested positive on COVID-19 in the last 14 days

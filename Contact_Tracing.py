@@ -8,10 +8,10 @@ class main_page(tk.Tk):
         self.geometry("600x550")
         
         self.add = tk.Button(self, text = "   Add Entry   ", command = main_page.go_to_add_entry)
-        self.add.place(x = 465, y = 225)
+        self.add.place(x = 265, y = 225)
 
         self.search = tk.Button(self, text = "   Search Entry   ")
-        self.search.place(x = 465, y = 300)
+        self.search.place(x = 260, y = 300)
         
     def go_to_add_entry():
         entry = add_entry()
