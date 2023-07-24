@@ -13,12 +13,18 @@ class add_entry(tk.Frame):
 
         # Ask the date of birth
         self.birth = tk.Label(self, text = "Date of Birth")
-        self.birth.place(x = 300, y = 50 )
+        self.birth.place(x = 300, y = 50)
 
         self.birth_entry = tk.Entry(self)
         self.birth_entry.place(x = 375, y = 50)
 
         # Ask the address
+        self.address = tk.Label(self, text = "Address")
+        self.address.place(x = 40, y = 100)
+
+        self.address_entry = tk.Entry(self)
+        self.address_entry.place(x = 90, y = 100)
+
         # Ask the phone number
         # Ask the email adress
         # Ask the date of visit
