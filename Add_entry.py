@@ -1,5 +1,6 @@
 import tkinter as tk
 import csv
+from tkinter import messagebox
 
 class add_entry(tk.Frame):
     def __init__(self, master = None):
@@ -138,6 +139,22 @@ class add_entry(tk.Frame):
         test_status = self.test_choice.get()
 
         # Save the information gathered into excel file using csv
-        with open("data_storage.csv", "a") as file:
+        with open("data_storage.csv", "a", newline = "") as file:
             store = csv.writer(file)
             store.writerow([name, birthday, address, phone, email, visit_date, vaccination_status, symptom_status, exposure_status, test_status])
+
+        # Create a messagebox that will let the user know that their data has ben submitted
+        messagebox.showinfo("Admin", "The information has been submitted.")
+        self.clear_entry()
+
+    def clear_entry(self):
+        self.name_entry.delete(0, tk.END)
+        self.birth_entry.delete(0, tk.END)
+        self.address_entry.delete(0, tk.END)
+        self.number_entry.delete(0, tk.END)
+        self.email_entry.delete(0, tk.END)
+        self.visit_entry.delete(0, tk.END)
+        self.choice.set(None)
+        self.symptom_choice.set(None)
+        self.exposure_choice.set(None)
+        self.test_choice.set(None)
