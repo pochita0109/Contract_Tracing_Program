@@ -118,3 +118,7 @@ class add_entry(tk.Frame):
 
         # Added label for personal information and for COVID-19 information
         self.personal = tk.Label(self, text = "PERSONAL INFORMATION", font=("Helvetica", 20)).pack()
+
+        # Added a submit button 
+        self.submit = tk.Button(self, text = "  Submit  ")
+        self.submit.place(x = 260, y = 525)
