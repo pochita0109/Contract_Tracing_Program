@@ -68,5 +68,20 @@ class add_entry(tk.Frame):
         self.choice5.place(x = 30, y = 375)
 
         # Ask if there are symptoms of COVID-19
+        self.symptom = tk.Label(self, text = "Do you have a symptoms of COVID-19?")
+        self.symptom.place(x = 30, y = 425)
+
+        self.symptom_choice = tk.StringVar()
+
+        self.symptom_choice1 = tk.Radiobutton(self, text = "Yes", variable = self.symptom_choice, value = "Yes")
+        self.symptom_choice1.place(x = 30, y = 450)
+
+        
+        self.symptom_choice2 = tk.Radiobutton(self, text = "No", variable = self.symptom_choice, value = "No")
+        self.symptom_choice2.place(x = 30, y = 475)
+        
+        self.symptom_choice3 = tk.Radiobutton(self, text = "Uncertain", variable = self.symptom_choice, value = "Uncertain")
+        self.symptom_choice3.place(x = 30, y = 500)
+
         # Ask if there are exposure on someone with COVID-19
         # Ask if tested positive on COVID-19 in the last 14 days
