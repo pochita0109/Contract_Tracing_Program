@@ -1,4 +1,5 @@
 import tkinter as tk
+import csv
 
 class add_entry(tk.Frame):
     def __init__(self, master = None):
@@ -120,5 +121,23 @@ class add_entry(tk.Frame):
         self.personal = tk.Label(self, text = "PERSONAL INFORMATION", font=("Helvetica", 20)).pack()
 
         # Added a submit button 
-        self.submit = tk.Button(self, text = "  Submit  ")
+        self.submit = tk.Button(self, text = "  Submit  ", command = self.get_data)
         self.submit.place(x = 260, y = 525)
+
+    # Get the information gathered from user
+    def get_data(self):
+        name = self.name_entry.get()
+        birthday = self.birth_entry.get()
+        address = self.address_entry.get()
+        phone = self.number_entry.get()
+        email = self.email_entry.get()
+        visit_date = self.visit_entry.get()
+        vaccination_status = self.choice.get()
+        symptom_status = self.symptom_choice.get()
+        exposure_status = self.exposure_choice.get()
+        test_status = self.test_choice.get()
+
+        # Save the information gathered into excel file using csv
+        with open("data_storage.csv", "a") as file:
+            store = csv.writer(file)
+            store.writerow([name, birthday, address, phone, email, visit_date, vaccination_status, symptom_status, exposure_status, test_status])
