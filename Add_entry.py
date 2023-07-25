@@ -123,7 +123,14 @@ class add_entry(tk.Frame):
 
         # Added a submit button 
         self.submit = tk.Button(self, text = "  Submit  ", command = self.get_data)
-        self.submit.place(x = 260, y = 525)
+        self.submit.place(x = 200, y = 525)
+
+        # Add an exit Button
+        self.exit = tk.Button(self, text = "  Exit  ", command = self.close)
+        self.exit.place(x = 350, y = 525)
+
+    def close(self):
+        self.master.destroy()
 
     # Get the information gathered from user
     def get_data(self):
