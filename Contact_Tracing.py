@@ -5,7 +5,7 @@ class main_page(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Contact Tracing")
-        self.geometry("600x600")
+        self.geometry("600x650")
         
         self.add = tk.Button(self, text = "   Add Entry   ", command = main_page.go_to_add_entry)
         self.add.place(x = 265, y = 225)
